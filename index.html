@@ -1,129 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ángeles Amelong – Portfolio</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
-  <style>
-    /* Reset y tipografía */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Poppins', sans-serif; color:#333; line-height:1.6; background:#fff; }
-    a { text-decoration:none; color:inherit; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ángeles Amelong – Portfolio</title>
 
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #f6d365, #fda085);
-      color:#fff;
-      text-align:center;
-      padding:120px 20px 80px;
-    }
-    header h1 { font-size:3rem; margin-bottom:10px; }
-    header p { font-size:1.3rem; margin-bottom:20px; }
-    header a.button {
-      background:#fff; color:#f06d5d; padding:12px 30px; border-radius:30px;
-      font-weight:600; transition:0.3s;
-    }
-    header a.button:hover { background:#f06d5d; color:#fff; }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 
-    /* Navbar sticky */
-    nav { position:sticky; top:0; background:#222; padding:15px; text-align:center; z-index:100; }
-    nav a { margin:0 15px; color:#fff; font-weight:600; transition:0.3s; }
-    nav a:hover { color:#f06d5d; }
+<style>
+/* Reset y tipografía */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Montserrat', sans-serif; color:#333; background:#f9f9f9; }
 
-    /* Section titles */
-    .section { padding:80px 20px; max-width:1100px; margin:auto; }
-    .section h2 { text-align:center; font-size:2.2rem; margin-bottom:40px; color:#f06d5d; }
+/* Header */
+header {
+  background:#1e1e1e;
+  color:#fff;
+  text-align:center;
+  padding:120px 20px 80px;
+}
+header h1 { font-family: 'Lora', serif; font-size:3rem; margin-bottom:15px; }
+header p { font-size:1.2rem; color:#ccc; margin-bottom:25px; }
+header a.button {
+  background:#f06d5d; color:#fff; padding:12px 30px; border-radius:30px;
+  font-weight:500; transition:0.3s;
+}
+header a.button:hover { background:#d85c4a; }
 
-    /* Sobre mí */
-    .about { text-align:center; max-width:800px; margin:auto; font-size:1.1rem; }
+/* Navbar sticky */
+nav { position:sticky; top:0; background:#fff; padding:15px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
+nav a { margin:0 15px; color:#333; font-weight:500; transition:0.3s; }
+nav a:hover { color:#f06d5d; }
 
-    /* Portfolio */
-    .gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:25px; }
-    .card {
-      background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card img { width:100%; display:block; }
-    .card:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.2); }
+/* Section titles */
+.section { padding:80px 20px; max-width:1100px; margin:auto; }
+.section h2 { text-align:center; font-family: 'Lora', serif; font-size:2.2rem; margin-bottom:50px; color:#1e1e1e; }
 
-    /* Servicios */
-    .services { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:25px; text-align:center; }
-    .service-card { padding:30px; background:#f5f5f5; border-radius:10px; font-weight:600; transition:0.3s; }
-    .service-card:hover { background:#f6d365; color:#fff; }
+/* Sobre mí */
+.about { text-align:center; max-width:800px; margin:auto; font-size:1.1rem; line-height:1.7; color:#555; }
 
-    /* Contacto */
-    .contact { text-align:center; }
-    .contact a { display:inline-block; margin:10px 20px; padding:10px 20px; background:#f06d5d; color:#fff; border-radius:30px; transition:0.3s; font-weight:600; }
-    .contact a:hover { background:#fda085; }
+/* Portfolio */
+.gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:30px; }
+.card {
+  background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img { width:100%; display:block; }
+.card:hover { transform:translateY(-5px); box-shadow:0 12px 30px rgba(0,0,0,0.15); }
 
-    /* Footer */
-    footer { background:#222; color:#fff; text-align:center; padding:30px 20px; }
+/* Servicios */
+.services { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:25px; text-align:center; }
+.service-card { padding:35px; background:#fff; border-radius:12px; font-weight:500; color:#333; transition:0.3s; box-shadow:0 5px 15px rgba(0,0,0,0.05);}
+.service-card:hover { background:#f06d5d; color:#fff; transform:translateY(-5px); }
 
-    /* Responsive */
-    @media(max-width:768px){ header h1 { font-size:2rem; } header p { font-size:1.1rem; } }
-  </style>
+/* Contacto */
+.contact { text-align:center; }
+.contact a { display:inline-block; margin:10px 20px; padding:12px 25px; background:#f06d5d; color:#fff; border-radius:30px; transition:0.3s; font-weight:500; }
+.contact a:hover { background:#d85c4a; }
+
+/* Footer */
+footer { background:#1e1e1e; color:#fff; text-align:center; padding:30px 20px; margin-top:40px; font-size:0.9rem; }
+
+/* Responsive */
+@media(max-width:768px){
+  header h1 { font-size:2rem; }
+  header p { font-size:1rem; }
+  .section { padding:60px 15px; }
+}
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Ángeles Amelong</h1>
-    <p>Licenciada en Relaciones Públicas y Comunicación Periodística</p>
-    <a href="#portfolio" class="button">Ver Portfolio</a>
-  </header>
+<!-- Header -->
+<header>
+  <h1>Ángeles Amelong</h1>
+  <p>Licenciada en Relaciones Públicas y Comunicación Periodística</p>
+  <a href="#portfolio" class="button">Ver Portfolio</a>
+</header>
 
-  <!-- Navbar -->
-  <nav>
-    <a href="#about">Sobre mí</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#services">Servicios</a>
-    <a href="#contact">Contacto</a>
-  </nav>
+<!-- Navbar -->
+<nav>
+  <a href="#about">Sobre mí</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#services">Servicios</a>
+  <a href="#contact">Contacto</a>
+</nav>
 
-  <!-- Sobre mí -->
-  <section id="about" class="section about">
-    <h2>Sobre mí</h2>
-    <p>Soy Ángeles Amelong, Licenciada en Relaciones Públicas y en Comunicación Periodística. Me considero una persona apasionada por el aprendizaje continuo y comprometida con el trabajo en equipo. Mi objetivo es aplicar mis conocimientos y habilidades para contribuir al éxito de proyectos que impacten de manera positiva en mi desarrollo profesional y en el de la organización.</p>
-  </section>
+<!-- Sobre mí -->
+<section id="about" class="section about">
+  <h2>Sobre mí</h2>
+  <p>Soy Ángeles Amelong, Licenciada en Relaciones Públicas y en Comunicación Periodística. Me considero una persona apasionada por el aprendizaje continuo y comprometida con el trabajo en equipo. Mi objetivo es aplicar mis conocimientos y habilidades para contribuir al éxito de proyectos que impacten de manera positiva en mi desarrollo profesional y en el de la organización.</p>
+</section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="section">
-    <h2>Portfolio</h2>
-    <div class="gallery">
-      <!-- Reemplazá con tus imágenes -->
-      <div class="card"><img src="images/proyecto1.jpg" alt="Proyecto 1"></div>
-      <div class="card"><img src="images/proyecto2.jpg" alt="Proyecto 2"></div>
-      <div class="card"><img src="images/proyecto3.jpg" alt="Proyecto 3"></div>
-      <div class="card"><img src="images/proyecto4.jpg" alt="Proyecto 4"></div>
-      <div class="card"><img src="images/proyecto5.jpg" alt="Proyecto 5"></div>
-      <div class="card"><img src="images/proyecto6.jpg" alt="Proyecto 6"></div>
-    </div>
-  </section>
+<!-- Portfolio -->
+<section id="portfolio" class="section">
+  <h2>Portfolio</h2>
+  <div class="gallery">
+    <div class="card"><img src="images/proyecto1.jpg" alt="Proyecto 1"></div>
+    <div class="card"><img src="images/proyecto2.jpg" alt="Proyecto 2"></div>
+    <div class="card"><img src="images/proyecto3.jpg" alt="Proyecto 3"></div>
+    <div class="card"><img src="images/proyecto4.jpg" alt="Proyecto 4"></div>
+    <div class="card"><img src="images/proyecto5.jpg" alt="Proyecto 5"></div>
+    <div class="card"><img src="images/proyecto6.jpg" alt="Proyecto 6"></div>
+  </div>
+</section>
 
-  <!-- Servicios -->
-  <section id="services" class="section services">
-    <h2>Servicios</h2>
-    <div class="service-card">Comunicación Institucional</div>
-    <div class="service-card">Gestión de Relaciones Públicas</div>
-    <div class="service-card">Creación de Contenidos</div>
-    <div class="service-card">Estrategias de Comunicación</div>
-  </section>
+<!-- Servicios -->
+<section id="services" class="section services">
+  <h2>Servicios</h2>
+  <div class="service-card">Comunicación Institucional</div>
+  <div class="service-card">Gestión de Relaciones Públicas</div>
+  <div class="service-card">Creación de Contenidos</div>
+  <div class="service-card">Estrategias de Comunicación</div>
+</section>
 
-  <!-- Contacto -->
-  <section id="contact" class="section contact">
-    <h2>Contacto</h2>
-    <a href="mailto:angelesamelong@gmail.com">📧 Email</a>
-    <a href="https://www.linkedin.com/in/angeles-amelong/" target="_blank">💼 LinkedIn</a>
-  </section>
+<!-- Contacto -->
+<section id="contact" class="section contact">
+  <h2>Contacto</h2>
+  <a href="mailto:angelesamelong@gmail.com">📧 Email</a>
+  <a href="https://www.linkedin.com/in/angeles-amelong/" target="_blank">💼 LinkedIn</a>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Ángeles Amelong – Todos los derechos reservados</p>
-  </footer>
+<!-- Footer -->
+<footer>
+  <p>© 2025 Ángeles Amelong – Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
